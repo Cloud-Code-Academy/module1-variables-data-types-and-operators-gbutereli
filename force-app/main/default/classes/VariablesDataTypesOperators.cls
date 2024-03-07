@@ -130,7 +130,8 @@ public with sharing class VariablesDataTypesOperators {
      * @return The concatenated string.
      */
     public static String concatenateStrings(String str1, String str2) {
-        return null; // Replace null with the variable you used to store the result
+        String text = str1+str2;
+        return text;
     }
 
 	/**
@@ -145,7 +146,9 @@ public with sharing class VariablesDataTypesOperators {
 	 * @return The complete sentence as a single String.
 	 */
 	public static String createSentence(String noun, String verb, String endingPunctuation) {
-		return null; // Replace null with the variable you used to store the result
+        String space ='';
+        String sentence = noun+space+verb+space+endingPunctuation;
+		return sentence; 
 	}
 
     /**
@@ -158,7 +161,18 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the date is in the past, False otherwise.
      */
     public static Boolean isDateInPast(Date dt) {
-        return null; // Replace null with the variable you used to store the result
+        
+        Date todayDate = Date.today();
+
+        if (dt < todayDate){
+            
+            Boolean isDateInPast = true;
+            return isDateInPast;
+
+        }else{
+            Boolean isDateInPast = false;
+            return isDateInPast;
+        }
     }
 
     /**
