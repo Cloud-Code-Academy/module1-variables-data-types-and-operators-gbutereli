@@ -165,7 +165,7 @@ public with sharing class VariablesDataTypesOperators {
         Date todayDate = Date.today();
 
         if (dt < todayDate){
-            
+
             Boolean isDateInPast = true;
             return isDateInPast;
 
@@ -185,7 +185,17 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the date is today or in the future, False otherwise.
      */
     public static Boolean isDateTodayOrFuture(Date dt) {
-        return null; // Replace null with the variable you used to store the result
+        Date todayDate = Date.today();
+
+        if (dt >= todayDate){
+
+            Boolean isDateInFuture = true;
+            return isDateInFuture;
+
+        }else {
+            Boolean isDateInFuture = false;
+            return isDateInFuture;
+        }
     }
 
     /**
@@ -198,9 +208,9 @@ public with sharing class VariablesDataTypesOperators {
      * @return The number of milliseconds equivalent to the given number of minutes.
      */
     public static Integer convertMinutesToMilliseconds(Integer minutes) {
-        Integer MILLISECONDS_PER_MINUTE = null; // Make this value a constant
-        Integer milliseconds;
-        return null; // Replace null with the variable you used to store the result
+        final Integer MILLISECONDS_PER_MINUTE = 60000;
+        Integer milliseconds = minutes * MILLISECONDS_PER_MINUTE;
+        return milliseconds; 
     }    
 
     /**
@@ -214,7 +224,9 @@ public with sharing class VariablesDataTypesOperators {
      * @return The average of the three numbers.
      */
     public static Double averageOfThreeNumbers(Integer a, Integer b, Integer c) {
-        return null; // Replace null with the variable you used to store the result
+        Integer total = a+b+c;
+        Integer avg = total/3;
+        return avg; 
     }
 
     /**
