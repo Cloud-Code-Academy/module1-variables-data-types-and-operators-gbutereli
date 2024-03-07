@@ -78,7 +78,7 @@ public with sharing class VariablesDataTypesOperators {
             return 0;
         }
         Integer result = a/b;
-        return result; // Replace null with the variable you used to store the result
+        return result; 
     }
 
     /**
@@ -100,7 +100,7 @@ public with sharing class VariablesDataTypesOperators {
             Boolean isEven = false;
             return isEven; 
         }
-        // Replace null with the variable you used to store the result
+        
     }
 
     /**
@@ -111,7 +111,14 @@ public with sharing class VariablesDataTypesOperators {
      * @return true if the number is positive, false otherwise.
      */
     public static Boolean isPositive(Integer num) {
-        return null; // Replace null with the variable you used to store the result
+        if (num>0){
+            Boolean isPositive = true;
+            return isPositive;
+        }else {
+            Boolean isPositive = false;
+            return isPositive;
+        }
+        
     }
 
     /**
