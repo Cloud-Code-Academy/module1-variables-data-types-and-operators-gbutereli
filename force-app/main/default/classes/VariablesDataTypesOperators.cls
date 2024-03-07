@@ -241,10 +241,10 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Integer adjustOrderOfOperations1(Integer a, Integer b, Integer c) {
         // Add parentheses around the addition operation so that it is performed before multiplication
-        Integer result = a + b * c;
+        Integer result = (a + b )* c;
 
         // Return the result
-        return null; // Replace null with the variable you used to store the result
+        return result; 
     }
 
     /**
@@ -256,8 +256,8 @@ public with sharing class VariablesDataTypesOperators {
         // Add parentheses in the below expression to change the result.
         // The result of the expression as it is right now is 43. 
         // You should add parentheses so that the result of the expression becomes 8.
-        Integer answer = 48 - 15 + 5 * 2;
-        return null; // Replace null with the variable you used to store the result
+        Integer answer = 48 - ((15 + 5) * 2);
+        return answer; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -276,9 +276,9 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Double complexOrderOfOperations(Integer a, Integer b, Integer c, Integer d, Integer e) {
         // Add parentheses around the multiplication and subtraction operations so that they are performed before division and addition
-        Double result = a * b - c / (Double) d + e;
+        Double result = ((a * b) - c) / (Double) d + e;
 
-        return null; // Replace null with the variable you used to store the result
+        return result ; // Replace null with the variable you used to store the result
     }
 
     /**
