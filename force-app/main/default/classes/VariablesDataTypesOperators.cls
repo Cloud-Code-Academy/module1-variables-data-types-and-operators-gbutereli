@@ -35,7 +35,7 @@ public with sharing class VariablesDataTypesOperators {
         if (a == null || b == null ){
             return null;
         }
-        Integer result = a+b;
+        Integer result = a + b;
         return result; 
     }
 
@@ -48,7 +48,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return The difference between the two numbers.
      */
     public static Integer subtraction(Integer a, Integer b) {
-        Integer result = a-b;
+        Integer result = a - b;
         return result; 
     }
 
@@ -60,7 +60,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return The product of the two numbers.
      */
     public static Integer multiplication(Integer a, Integer b) {
-        Integer result = a*b;
+        Integer result = a * b;
         return result; 
     }
 
@@ -77,7 +77,7 @@ public with sharing class VariablesDataTypesOperators {
         if(b == 0){
             return 0;
         }
-        Integer result = a/b;
+        Integer result = a / b;
         return result; 
     }
 
@@ -94,11 +94,9 @@ public with sharing class VariablesDataTypesOperators {
     public static Boolean isEven(Integer num) {
         if(Math.mod(num, 2) == 0) //a number perfectly divisible by 2 has a remainder of 0. Therefore it's an even number.
         {
-            Boolean isEven = true;
-            return isEven;
+            return true;
         }else {
-            Boolean isEven = false;
-            return isEven; 
+            return false; 
         }
         
     }
@@ -112,11 +110,9 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Boolean isPositive(Integer num) {
         if (num>0){
-            Boolean isPositive = true;
-            return isPositive;
+            return true;
         }else {
-            Boolean isPositive = false;
-            return isPositive;
+            return false;
         }
         
     }
@@ -130,7 +126,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return The concatenated string.
      */
     public static String concatenateStrings(String str1, String str2) {
-        String text = str1+str2;
+        String text = str1 + str2;
         return text;
     }
 
@@ -147,7 +143,7 @@ public with sharing class VariablesDataTypesOperators {
 	 */
 	public static String createSentence(String noun, String verb, String endingPunctuation) {
         String space ='';
-        String sentence = noun+space+verb+space+endingPunctuation;
+        String sentence = noun + space + verb + space + endingPunctuation;
 		return sentence; 
 	}
 
@@ -165,10 +161,8 @@ public with sharing class VariablesDataTypesOperators {
         Date todayDate = Date.today();
 
         if (dt < todayDate){
-
             Boolean isDateInPast = true;
             return isDateInPast;
-
         }else{
             Boolean isDateInPast = false;
             return isDateInPast;
@@ -225,7 +219,8 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Double averageOfThreeNumbers(Integer a, Integer b, Integer c) {
         Integer total = a+b+c;
-        Integer avg = total/3;
+        Integer denominator = 3;
+        Integer avg = total/denominator;
         return avg; 
     }
 
@@ -295,7 +290,7 @@ public with sharing class VariablesDataTypesOperators {
 
         Double celsius = (fahrenheit - SUBTRACT_FACTOR) * (MULTIPLY_FACTOR/DIVIDE_FACTOR);
     
-        return celsius ; 
+        return celsius; 
     }
 
 
@@ -313,7 +308,7 @@ public with sharing class VariablesDataTypesOperators {
         Double divisionResult = a/b;
 
         // Write the code for type casting the divisionResult to an Integer
-        Integer roundedResult = divisionResult.intValue(); //I'm not sure that this is the method you were expecting, but I found it on a salesforce dev forum while searching for a solution.
+        Integer roundedResult = Integer.valueOf(divisionResult); //I'm not sure that this is the method you were expecting, but I found it on a salesforce dev forum while searching for a solution.
         return roundedResult; 
     }
 
